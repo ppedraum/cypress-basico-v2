@@ -158,13 +158,13 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get('#privacy a').should('have.attr','target','_blank');
     });
 
-    it('Acessa a pagina de plitica de privacidade retirando o target',function(){
+    it.only('Acessa a pagina de plitica de privacidade retirando o target',function(){
         // cy.get('#privacy a').click();
         cy.get('#privacy a')
         .invoke('removeAttr','target')
         .click();
 
-        cy.contains('Talking About Testing').should('be.visible');
+        cy.contains('Talking About Tsting').should('be.visible');
 
 
     });
